@@ -1,0 +1,119 @@
+<!--
+Name: Arianna Warren
+ID#: 2304658
+Date: March 11, 2025
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main_style.css" />
+    <link rel="stylesheet" href="styles/about_us_style.css" />
+    
+    <style>
+  
+      body {
+        background: linear-gradient(to right, purple, blue);
+        color: rgb(247, 180, 180);
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      
+      nav a {
+        color: rgb(206, 194, 194);
+        text-decoration: none;
+        padding: 10px;
+        font-weight: bold;
+      }
+      
+      nav a:hover {
+        text-decoration: underline;
+      }
+      
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+
+    <title>About Us</title>
+  </head>
+  <body>
+    <div class="logo">Jammin Beauty</div>
+    
+    <nav>
+      <a href="Products.html">Products</a>
+      <a href="Invoice.html">Invoice</a>
+      <a href="About Us.html">About Us</a>
+      <a href="index.html">Home</a>
+    </nav>
+
+    <header>
+      <div>
+        <h2>About Us</h2>
+        <p>
+          Jammin Beauty is an English national retailer of personal care and beauty products.
+          Jammin Beauty aims to inspire the inclusion of everyone to celebrate beauty.
+        </p>
+      </div>
+      <img src="images\About us.webp" alt="About Us Image" />
+    </header>
+
+    <section id="info">
+      <h3>About Me</h3>
+      <p>Name: Arianna Warren</p>
+      <p>ID#: 2304658</p>
+      <p>
+        Email: <a href="mailto:ariannaw268@gmail.com">ariannaw@gmail.com</a>
+      </p>
+      <p>Module Code: CIT2011</p>
+      <p>Assignment Name: Internal Assignment #2</p>
+      <p>Time and Day of Class: Monday @ 12pm</p>
+    </section>
+
+    <footer>
+      <div>
+        <img src="images/logo.jpg" alt="logo" />
+        <div class="social_icons">
+          <ul>
+            <li><a href="https://www.facebook.com/"></a></li>
+            <li><a href="https://x.com/"></a></li>
+            <li><a href="https://www.instagram.com/"></a></li>
+            <li><a href="https://www.linkedin.com/"></a></li>
+          </ul>
+          <br />
+          <div class="links">
+            <a href="login.html">Login</a>
+            <a href="" class="hidden" onclick="logout_user(event)">Logout</a>
+          </div>
+          
+        <p>&copy; 2025 Arianna Warren. All rights reserved.</p>
+  
+      </div>
+    </footer>
+
+    <div id="cart" class="popup">
+      <div>
+        
+        <h2>Cart</h2>
+
+        <table id="cart_items">
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+          </tr>
+        </table>
+
+        <button id="checkout_btn" onclick="window.location.href='invoice.html'">Checkout</button>
+      </div>
+    </div>
+
+    <script src="app/main.js"></script>
+  </body>
+</html>

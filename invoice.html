@@ -1,0 +1,120 @@
+<!--
+Name: Arianna Warren
+ID#: 2304658
+Date: March 11, 2025
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main_style.css" />
+    <link rel="stylesheet" href="styles/invoice_style.css" />
+    <title>Invoice</title>
+  </head>
+  <body>
+    <nav id="nav_bar">
+      <div class="links">
+        <a href="Products.html">Products</a>
+        <a href="About Us.html">About Us</a>
+        <a href="index.html">Home</a>
+      </div>
+      <p id="title_text" onclick="window.location.href='index.html'">
+        Jammin Beauty
+      </p>
+      <div class="links">
+        <a href="login.html">Login</a>
+        <a href="" class="hidden" onclick="logout_user(event)">Logout</a>
+        <a href="" class="hidden" onclick="show_cart(event)">Cart</a>
+      </div>
+    </nav>
+
+    <div id="invoice">
+      <header>
+        <img src="images/logo.jpg" alt="logo" />
+        <h3>No. <span id="invoice_num"></span></h3>
+      </header>
+
+      <h2>Invoice</h2>
+      <h4>Date: <span id="today_date"></span></h4>
+
+      <div id="billing_info">
+        <div id="to">
+          <h3>To:</h3>
+        </div>
+        <div id="from">
+          <h3>From:</h3>
+          <p>Jammin Beauty</p>
+          <p>19 Auguste Road</p>
+          <p>Kingston, Jamaica</p>
+          <p>876 435 8674</p>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Items #</th>
+            <th>Price $</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr>
+            <th>Total</th>
+            <td id="total_price">$6,340.00</td>
+          </tr>
+        </tfoot>
+      </table>
+
+
+      <div id="buttons">
+
+        <button onclick="clear_cart()">Cancel</button>
+        <button onclick="window.print()">Print</button>
+        <button onclick="window.location.href = 'index.html'">Exit</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Arianna Warren. All rights reserved.</p>
+    </footer>
+
+    <script src="app/main.js"></script>
+    <script>
+
+      document.getElementById("invoice_num").innerText = String(
+        Math.floor(Math.random() * 9999)
+      ).padStart(4, "0");
+
+      const today = new Date().toLocaleDateString("default", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+      });
+
+      document.getElementById("today_date").innerText = today;
+
+      var full_name = JSON.parse(localStorage.getItem("login_user")).full_name;
+      document.getElementById("to").innerHTML += <p>${full_name}</p>;
+
+      const login_user = JSON.parse(localStorage.getItem("login_user"));
+      const cart = login_user.cart;
+      const invoice_table = document
+        .getElementById("invoice")
+        .getElementsByTagName("tbody")[0];
+      let total = 0;
+
+      for (const item of cart) {
+        const row = document.createElement("tr");
+        row.innerHTML = <td>${item.fullname}</td><td>$${item.price}</td>;
+        total += item.price;
+        invoice_table.appendChild(row);
+      }
+
+
+      document.getElementById("total_price").textContent = $${total.toFixed(2)};
+    </script>
+  </body>
+</html>

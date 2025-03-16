@@ -1,0 +1,155 @@
+<!--
+Name: Arianna Warren
+ID#: 2304658
+Date: March 11, 2025
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main_style.css" />
+    <link rel="stylesheet" href="styles/login_style.css" />
+    <title>Login</title>
+    <style>
+      /* Gradient background */
+      body {
+        background: linear-gradient(to right, #fbc2eb, #a6c1ee); 
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Container Style */
+      #login_signup_form {
+        background-color: pink;  /* Set container background to pink */
+        margin: 50px auto;
+        padding: 30px;
+        border-radius: 10px;
+        width: 60%;
+      }
+
+      /* Navigation Bar Style */
+      #nav_bar {
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      #nav_bar .links a {
+        color: black;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 16px;
+      }
+
+      #nav_bar #title_text {
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        color: #333;
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      #nav_bar .links a:hover {
+        color: darkgreen;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+      }
+
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav id="nav_bar">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about_us.html">About Us</a>
+        <a href="Products.html">Products</a>
+        <a href="Invoice.html">Invoice</a>
+      </div>
+      <p id="title_text" onclick="window.location.href='index.html'">
+        Jammin Beauty
+      </p>
+      <div class="links">
+        <a href="login.html">Login</a>
+        <a href="" class="hidden" onclick="logout_user(event)">Logout</a>
+        <a href="" class="hidden" onclick="show_cart(event)">Cart</a>
+      </div>
+    </nav>
+
+    <!-- Login/Signup Form -->
+    <div id="login_signup_form">
+      <div id="col">
+        <!-- Login Form -->
+        <form id="login">
+          <h1>Login</h1>
+          <input name="username" type="text" placeholder="Username" />
+          <input name="password" type="password" placeholder="Password" />
+          <a href="#">Forgot your password?</a>
+          <button type="submit" id="login_btn">Login</button>
+        </form>
+        <div id="login_text" class="hidden">
+          <h2>Welcome Back!</h2>
+          <p>To keep connected with us, please login with your personal info</p>
+          <button id="show_login_btn">Login</button>
+        </div>
+      </div>
+
+      <div id="col_2">
+        <!-- Signup Form -->
+        <form id="signup" class="hidden" action="#">
+          <h1>Sign Up</h1>
+          <input name="full_name" type="text" placeholder="Name" />
+          <input name="username" type="text" placeholder="Username" />
+          <input name="password" type="password" placeholder="Password" />
+          <button id="sign_up_btn">Sign Up</button>
+        </form>
+        <div id="signup_text">
+          <h2>Heyy Prettyyy!</h2>
+          <p>Sign up today  |  enhance the beauty in you</p>
+          <button id="show_sign_up_btn">Sign Up</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div>
+        <p>&copy; 2025 Arianna Warren. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="app/main.js"></script>
+    <script src="app/login.js"></script>
+
+    <script>
+      const show_sign_up_btn = document.getElementById("show_sign_up_btn");
+      show_sign_up_btn.addEventListener("click", () => {
+        document.getElementById("signup").classList.remove("hidden");
+        document.getElementById("login_text").classList.remove("hidden");
+
+        document.getElementById("login").classList.add("hidden");
+        document.getElementById("signup_text").classList.add("hidden");
+      });
+
+      const show_login_btn = document.getElementById("show_login_btn");
+      show_login_btn.addEventListener("click", () => {
+        document.getElementById("signup").classList.add("hidden");
+        document.getElementById("login_text").classList.add("hidden");
+
+        document.getElementById("login").classList.remove("hidden");
+        document.getElementById("signup_text").classList.remove("hidden");
+      });
+    </script>
+  </body>
+</html>

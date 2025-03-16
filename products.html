@@ -1,0 +1,193 @@
+<!--
+Name: Arianna Warren
+ID#: 2304658
+Date: March 11, 2025
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jammin Beauty</title>
+    <style>
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6ea;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background: #fff;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8d7da;
+            padding: 50px;
+            text-align: left;
+        }
+        .hero-content {
+            max-width: 50%;
+        }
+        .hero img {
+            width: 300px;
+        }
+        .btn {
+            background: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #e65c50;
+        }
+
+        /* Products */
+        .products {
+            padding: 50px;
+            text-align: center;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .product-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .product-card img {
+            width: 150px;
+            border-radius: 10px;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: red;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo">Jammin Beauty</div>
+        <ul class="nav-links">
+          <nav>
+            <a href="Products.html">Products</a>
+            <a href="Invoice.html">Invoice</a>
+            <a href="About Us.html">About Us</a>
+            <a href="index.html">Home</a>
+          </nav>
+        </ul>
+    </nav>
+
+ 
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Jammin HYDRATING FACE OIL</h1>
+            <p>A unique formula that hydrates and nourishes your skin with organic ingredients.</p>
+            <button class="btn">Order Now</button>
+        </div>
+        <img src="images\face oil.jpg" alt="Jammin Face Oil">
+    </header>
+
+   
+    <section class="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="images\rose soap.webp" alt="Rose Soap Bar">
+                <h3>Rose mint soap</h3>
+                <p>$2,055.00 <span class="old-price">$4,100.00</span></p>
+                <button class="btn">Buy</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="images\body oil.jpg" alt="Rejuvenating Body Oil">
+                <h3>Rejuvenating Body Oil</h3>
+                <p>$1,060.00 <span class="old-price">$1,400.00</span></p>
+                <button class="btn">Buy</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="images\perfume.jpg" alt="All diamonds perfume">
+                <h3>All Diamonds perfume</h3>
+                <p>$2,275.00 <span class="old-price">$5,100.00</span></p>
+                <button class="btn">Buy</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="images\body scrub.jpg" alt="Sugar Body scrub">
+                <h3>Sugar Body scrub</h3>
+                <p>$1,075.00 <span class="old-price">$3,985.00</span></p>
+                <button class="btn">Buy</button>
+            </div>
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+           
+              const buyButtons = document.querySelectorAll(".btn");
+      
+             
+              buyButtons.forEach(button => {
+                  button.addEventListener("click", function() {
+                      alert("Item added to cart!");
+                     
+                  });
+              });
+          });
+      </script>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="links">
+        <a href="login.html">Login</a>
+        <a href="" class="hidden" onclick="logout_user(event)">Logout</a>
+        <a href="" class="hidden" onclick="show_cart(event)">Cart</a>
+      </div>
+        <p>&copy; 2025 Arianna Warren - All Rights Reserved</p>
+    </footer>
+</body>
+</html>
