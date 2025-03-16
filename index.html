@@ -1,0 +1,173 @@
+<!--
+Name: Arianna Warren
+ID#: 2304658
+Date: March 11, 2025
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="" rel="stylesheet">
+ 
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #459e67 55%, #c76cac);
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            width: 90%;
+            margin: 0 auto;
+            background-color: rgba(33, 10, 63, 0.6); 
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 700;
+            color: #b589e0;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #b589e0;
+            font-weight: 500;
+        }
+
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            width: 90%;
+        }
+
+        .about-container {
+            background-color: rgba(70, 31, 107, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 60%;
+            text-align: center;
+        }
+
+        .about-container .line {
+            width: 30%;
+            height: 2px;
+            background: #b589e0; 
+            border-radius: 2px;
+            margin: 10px auto;
+        }
+
+        .about-container h2 {
+            color: #b589e0;
+        }
+
+        .about-container p {
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        .about-image {
+            width: 30%;
+            margin-left: 20px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        footer {
+            padding: 20px;
+            background-color: #3d1e4e;
+            color: #c9bde0;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+
+        footer a {
+            color: #c9bde0;
+            text-decoration: none;
+        }
+
+        footer img {
+            width: 40px;
+            height: 40px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Jammin Beauty</div>
+        <img src="images\logo.jpg" alt="logo" style="height: 60px; width: auto;"/>
+        <nav>
+            <a href="Products.html">Products</a>
+            <a href="Invoice.html">Invoice</a>
+            <a href="About Us.html">About Us</a>
+        </nav>
+    </header>
+
+    <div class="about-section">
+        <div class="about-container">
+            <div class="line"></div>
+            <p>Welcome to Jammin Beauty</p>
+            <p>We offer a wide variety of beauty supplies. Shop local, Shop Jammin.</p>
+            <p>Owner: Arianna Warren</p>
+        </div>
+        <div class="about-image">
+            <img src="images\cover.jpg" alt="Jammin Beauty" />
+        </div>
+    </div>
+
+    <p>Feel free to reach out to us with any questions or feedback</p>
+
+    <footer>
+        <h3>For More Information Contact Us</h3>
+        <a href="https://www.gmail.com" target="_blank" title="Gmail">
+            <img src="../assets/gmail.png" alt="Gmail">
+        </a>
+    </a>
+    <div class="social_icons">
+        <ul>
+          <li><a href="https://www.facebook.com/">Facebook</a></li>
+          <li><a href="https://x.com/">X</a></li>
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+        <div class="links">
+            <a href="login.html">Login</a>
+            <a href="" class="hidden" onclick="logout_user(event)">Logout</a>
+          </div>
+        
+      </div>
+        <p>&copy; 2025 Jammin Beauty | All rights reserved.</p>
+    </footer>
+</body>
+</html>
