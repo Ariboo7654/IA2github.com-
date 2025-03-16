@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, rgb(184, 156, 184), rgb(43, 211, 133)); /* Updated gradient */
+  color: #fff;
+}
+
+
+#invoice {
+  width: 8.5in;
+  min-height: 8in;
+  margin: 60px auto;
+  padding: 20px;
+  
+  background-color: rgb(204, 223, 96);
+  background-image: linear-gradient(
+      color-mix(in srgb, var(--main-colour) 70%, #ffffff00 30%),
+      #ffffff 40%
+    ),
+    url("/images/invoice_bg_img.png");
+
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+  border: 5px solid rgb(17, 17, 17); 
+  border-radius: 10px;
+  box-shadow: 0 0 1in rgba(0, 0, 0, 0.2);
+  color: #000;
+}
+
+
+#invoice header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 1in;
+  border-bottom: 3px solid rgb(0, 0, 0); 
+}
+
+#invoice img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+#invoice h1 {
+  text-align: center;
+  padding: 20px 0 40px;
+}
+
+#invoice #billing_info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding: 10px;
+  border: 2px solid rgb(0, 0, 0); 
+}
+
+
+#invoice table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#invoice table, th, td {
+  border: 2px solid rgb(0, 0, 0); 
+}
+
+#invoice table thead {
+  background-color: var(--accent-colour-1);
+}
+
+#invoice table tbody tr:nth-child(even) {
+  background-color: color-mix(in srgb, var(--accent-colour-1) 30%, #ffffff 30%);
+}
+
+#invoice th, #invoice td {
+  padding: 10px;
+  text-align: left;
+}
+
+#invoice tfoot th {
+  text-align: right;
+}
+
+#invoice table tfoot {
+  border-top: 2px solid black;
+}
+
+/* Buttons */
+#buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button {
+  background: rgb(64, 53, 112);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: rgb(212, 0, 255);
+}
+
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+  border-top: 3px solid rgb(0, 0, 0); 
+}
+
+
+@media print {
+  #nav_bar, footer, #buttons {
+    display: none !important;
+  }
+
+  body {
+    background-color: rgb(108, 180, 114);
+  }
+
+  #invoice {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background-image: none;
+    background-color: rgb(196, 158, 180);
+    page-break-after: always;
+  }
+}
